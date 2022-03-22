@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // Limitando a quantidade de caracteres da chave //
+        // A quantidade de caracteres pode dar problema no deploy do sistema //
         Schema::defaultStringLength(191);
     }
 }
