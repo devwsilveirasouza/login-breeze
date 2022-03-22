@@ -10,4 +10,9 @@ class NavigationController extends Controller
     {
         return view('site.home');
     }
+
+    public function dashboard()
+    {
+        return view('dashboard', ['user' => auth()->user()]);
+    }
 }

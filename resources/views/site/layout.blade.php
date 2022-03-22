@@ -10,21 +10,27 @@
     <!-- Materialize - Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <style>
+        header,
+        main,
+        footer {
+            padding-left: 300px;
+        }
+
+        @media only screen and (max-width : 992px) {
+
+            header,
+            main,
+            footer {
+                padding-left: 0;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
-
-    <nav class="blue">
-        <div class="nav-wrapper container">
-            <a href="{{ route('home') }}" class="brand-logo light">Login Breeze</a>
-
-            {{-- Menu Desktop --}}
-            <ul class="right hide-on-med-and-down">
-                <li><a href=" {{route('login')}} ">Login</a></li>
-                <li><a href=" {{route('register')}} ">Registre-se</a></li>
-            </ul>
-        </div>
-    </nav>
 
     @yield('content')
 
@@ -33,6 +39,14 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Materialize - Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        // Or with jQuery
+
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+    </script>
 
 </body>
 
